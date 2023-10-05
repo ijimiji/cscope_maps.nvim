@@ -9,7 +9,7 @@ local prepare = function(parsed_output)
 
 	for _, entry in ipairs(parsed_output) do
 		local _entry = ("%s:%s:%s"):format(
-			make_entry.file(entry["filename"], { file_icons = true, color_icons = true }),
+			make_entry.file(entry["filename"], { file_icons = false, color_icons = false }),
 			ansi_codes.green(entry["lnum"]),
 			ansi_codes.magenta(entry["text"])
 		)
